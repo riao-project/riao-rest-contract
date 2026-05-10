@@ -1,6 +1,6 @@
 {
 	"name": "@riao/rest-contract",
-	"version": "0.1.0",
+	"version": "1.0.0",
 	"description": "",
 	"author": "riao-project",
 	"license": "MIT",
@@ -41,7 +41,14 @@
 		"vite-plugin-dts": "^4.5.4",
 		"vitest": "^4.1.2"
 	},
-	"keywords": [],
+	"keywords": [
+		"riao",
+		"rest",
+		"contract",
+		"typescript",
+		"api",
+		"types"
+	],
 	"main": "./dist/src/index.cjs",
 	"module": "./dist/src/index.mjs",
 	"types": "./dist/src/index.d.ts",
