@@ -1,9 +1,7 @@
-/**
- * Export the public library here.
- *
- * See docs/guides/public-exports.md for
- *  detailed conventions on naming, export patterns,
- *  and package.json configuration.
- */
-
-// {{ remrg:task Export the main functionality of the lib/app here }}
+export * from './common';
+export * from './create';
+export * from './read';
+export * from './update';
+export * from './delete';
+export * from './list';
+export * from './search';
