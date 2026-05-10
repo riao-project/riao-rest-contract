@@ -128,59 +128,6 @@ const response: SearchResponse<User> = {
 };
 ```
 
-## API Reference
-
-### Common
-
-| Type | Description |
-|---|---|
-| `DatabaseRecordWithId` | Base record type — a `Record<string, any>` that requires an `id: string` field. All resource interfaces should extend this. |
-
-### Create
-
-| Type | Description |
-|---|---|
-| `CreateRequest<T>` | Request payload for creating a record. `id` is omitted (or partial). |
-| `CreateResponse` | `{ id: string }` — the server-assigned id of the newly created record. |
-
-### Read
-
-| Type | Description |
-|---|---|
-| `ReadRequest` | `{ id: string }` — identifies the record to fetch. |
-| `ReadResponse<T>` | The full record of type `T`. |
-
-### Update
-
-| Type | Description |
-|---|---|
-| `UpdateRequest<T>` | `id` is required; all other fields of `T` are optional. |
-| `UpdateResponse` | `void` |
-
-### Delete
-
-| Type | Description |
-|---|---|
-| `DeleteRequest` | `{ id: string }` — identifies the record to delete. |
-| `DeleteResponse` | `void` |
-
-### List
-
-| Type | Description |
-|---|---|
-| `ListRequest` | Pagination and simple ordering (`limit`, `offset`, `orderBy`, `orderDirection`). |
-| `ListResponse<T>` | `T[]` — an array of records. |
-
-### Search
-
-| Type | Description |
-|---|---|
-| `SearchRequest` | Extends `ListRequest` with `columns`, `where`, `aggregates`, `groupBy`, and `order`. |
-| `SearchResponse<T>` | `{ records: T[]; count: number }` |
-| `RiaoSearchCondition` | A single filter condition: `{ column, operator, value, minValue?, maxValue? }`. Supported operators: `=`, `<`, `<=`, `>`, `>=`, `LIKE`, `INARRAY`, `BETWEEN`. |
-| `RiaoAggregateColumn` | `{ column, function, alias? }`. Supported functions: `count`, `sum`, `avg`, `min`, `max`. |
-| `RiaoOrderItem` | `{ column, direction? }` where `direction` is `'ASC'` or `'DESC'`. |
-
 ## Contributing
 
 - [Contributing Guide](./CONTRIBUTING.md)
