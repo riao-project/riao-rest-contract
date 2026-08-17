@@ -5,3 +5,6 @@ export * from './update';
 export * from './delete';
 export * from './list';
 export * from './search';
+export * from './bulk-update';
+export * from './bulk-delete';
+export * from './task';
